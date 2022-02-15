@@ -22,10 +22,12 @@ public class Main {
         double value;
         while (true) {
          System.out.print(prompt);
-         value = scanner.nextInt();
+         value = scanner.nextFloat();
          if (value >= min && value <= max)
              break;
          System.out.println("Enter a value between " + min + "and " + max);
+        }
+        return value;
       }
     
     public static double calculateMortgage(
@@ -41,5 +43,5 @@ public class Main {
                 * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
                 / (Math.pow(1 + monthlyInterest, numberOfPayments) -1 );
         return mortgage;
-        
+    }    
 }
